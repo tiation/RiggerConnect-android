@@ -1,0 +1,5 @@
+{
+  "apiBaseUrl": "https://localhost:3000/api",
+  "stripePublishableKey": "pk_test_demo_key_for_local_development",
+  "googleMapsApiKey": "demo_google_maps_key_for_local_development"
+}
