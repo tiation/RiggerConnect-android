@@ -1,0 +1,1182 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tiation.riggerhire"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:5:5-79
+12-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:6:5-79
+13-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:7:5-81
+14-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:7:22-78
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:8:5-65
+15-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:8:22-62
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:9:5-80
+16-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:9:22-77
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:10:5-81
+17-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:10:22-78
+18
+19    <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+20    <queries>
+20-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:8:5-12:15
+21
+22        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+23        <package android:name="com.android.chrome" />
+23-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:11:9-54
+23-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:11:18-51
+24        <!-- Added to check the default browser that will host the AuthFlow. -->
+25        <intent>
+25-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:13:9-17:18
+26            <action android:name="android.intent.action.VIEW" />
+26-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:17-69
+26-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:25-66
+27
+28            <data android:scheme="http" />
+28-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+28-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+29        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+30        <package android:name="com.google.android.apps.maps" />
+30-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+30-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+31    </queries>
+32
+33    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+33-->[androidx.biometric:biometric:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e55860f26dcb8b351df7307be256a8ee/transformed/biometric-1.1.0/AndroidManifest.xml:24:5-72
+33-->[androidx.biometric:biometric:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e55860f26dcb8b351df7307be256a8ee/transformed/biometric-1.1.0/AndroidManifest.xml:24:22-69
+34    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+34-->[androidx.biometric:biometric:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e55860f26dcb8b351df7307be256a8ee/transformed/biometric-1.1.0/AndroidManifest.xml:27:5-74
+34-->[androidx.biometric:biometric:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e55860f26dcb8b351df7307be256a8ee/transformed/biometric-1.1.0/AndroidManifest.xml:27:22-71
+35    <uses-permission android:name="android.permission.WAKE_LOCK" />
+35-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:5-68
+35-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:23:22-65
+36    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+36-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+36-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:22-78
+37    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+37-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+37-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:22-74
+38    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+38-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:26:5-110
+38-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:26:22-107
+39    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+39-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:23:5-77
+39-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:23:22-74
+40    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+40-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:26:5-82
+40-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:26:22-79
+41    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+41-->[com.google.android.gms:play-services-measurement-impl:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6acdb6a63ae27f82ea451134ee4a7562/transformed/jetified-play-services-measurement-impl-21.5.0/AndroidManifest.xml:27:5-79
+41-->[com.google.android.gms:play-services-measurement-impl:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6acdb6a63ae27f82ea451134ee4a7562/transformed/jetified-play-services-measurement-impl-21.5.0/AndroidManifest.xml:27:22-76
+42
+43    <uses-feature
+43-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+44        android:glEsVersion="0x00020000"
+44-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+45        android:required="true" />
+45-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+46
+47    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+47-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:26:5-88
+47-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:26:22-85
+48    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+48-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:27:5-82
+48-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:27:22-79
+49
+50    <permission
+50-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+51        android:name="com.tiation.riggerhire.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+52        android:protectionLevel="signature" />
+52-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+53
+54    <uses-permission android:name="com.tiation.riggerhire.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+54-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+54-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+55
+56    <application
+56-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:12:5-75:19
+57        android:name="com.tiation.riggerhire.RiggerHireApplication"
+57-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:13:9-46
+58        android:allowBackup="true"
+58-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:14:9-35
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.12.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/274b218dd299ff35ce4423dfe4d70e1f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+60        android:dataExtractionRules="@xml/data_extraction_rules"
+60-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:15:9-65
+61        android:debuggable="true"
+62        android:extractNativeLibs="false"
+63        android:fullBackupContent="@xml/backup_rules"
+63-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:16:9-54
+64        android:icon="@mipmap/ic_launcher"
+64-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:17:9-43
+65        android:label="@string/app_name"
+65-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:18:9-41
+66        android:roundIcon="@mipmap/ic_launcher_round"
+66-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:19:9-54
+67        android:supportsRtl="true"
+67-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:20:9-35
+68        android:theme="@style/Theme.RiggerHire.Dark"
+68-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:21:9-53
+69        android:usesCleartextTraffic="true" >
+69-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:22:9-44
+70        <activity
+70-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:25:9-33:20
+71            android:name="com.tiation.riggerhire.ui.MainActivity"
+71-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:26:13-44
+72            android:exported="true"
+72-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:27:13-36
+73            android:theme="@style/Theme.RiggerHire.Dark" >
+73-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:28:13-57
+74            <intent-filter>
+74-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:29:13-32:29
+75                <action android:name="android.intent.action.MAIN" />
+75-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:30:17-69
+75-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:30:25-66
+76
+77                <category android:name="android.intent.category.LAUNCHER" />
+77-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:31:17-77
+77-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:31:27-74
+78            </intent-filter>
+79        </activity>
+80        <activity
+80-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:35:9-38:60
+81            android:name="com.tiation.riggerhire.ui.auth.LoginActivity"
+81-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:36:13-50
+82            android:exported="false"
+82-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:37:13-37
+83            android:theme="@style/Theme.RiggerHire.Dark" />
+83-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:38:13-57
+84        <activity
+84-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:40:9-43:60
+85            android:name="com.tiation.riggerhire.ui.auth.RegisterActivity"
+85-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:41:13-53
+86            android:exported="false"
+86-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:42:13-37
+87            android:theme="@style/Theme.RiggerHire.Dark" />
+87-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:43:13-57
+88        <activity
+88-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:45:9-48:60
+89            android:name="com.tiation.riggerhire.ui.jobs.JobDetailActivity"
+89-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:46:13-54
+90            android:exported="false"
+90-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:47:13-37
+91            android:theme="@style/Theme.RiggerHire.Dark" />
+91-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:48:13-57
+92        <activity
+92-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:50:9-53:60
+93            android:name="com.tiation.riggerhire.ui.jobs.JobsListActivity"
+93-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:51:13-53
+94            android:exported="false"
+94-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:52:13-37
+95            android:theme="@style/Theme.RiggerHire.Dark" />
+95-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:53:13-57
+96        <activity
+96-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:55:9-58:60
+97            android:name="com.tiation.riggerhire.ui.payments.PaymentsActivity"
+97-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:56:13-57
+98            android:exported="false"
+98-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:57:13-37
+99            android:theme="@style/Theme.RiggerHire.Dark" />
+99-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:58:13-57
+100        <activity
+100-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:60:9-63:60
+101            android:name="com.tiation.riggerhire.ui.profile.ProfileActivity"
+101-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:61:13-55
+102            android:exported="false"
+102-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:62:13-37
+103            android:theme="@style/Theme.RiggerHire.Dark" />
+103-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:63:13-57
+104        <activity
+104-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:65:9-68:60
+105            android:name="com.tiation.riggerhire.ui.onboarding.OnboardingWelcomeActivity"
+105-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:66:13-68
+106            android:exported="false"
+106-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:67:13-37
+107            android:theme="@style/Theme.RiggerHire.Dark" />
+107-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:68:13-57
+108        <activity
+108-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:70:9-73:60
+109            android:name="com.tiation.riggerhire.ui.onboarding.OnboardingPermissionsActivity"
+109-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:71:13-72
+110            android:exported="false"
+110-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:72:13-37
+111            android:theme="@style/Theme.RiggerHire.Dark" />
+111-->/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/app/src/main/AndroidManifest.xml:73:13-57
+112        <activity
+112-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:8:9-12:58
+113            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+113-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:9:13-80
+114            android:exported="false"
+114-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:10:13-37
+115            android:theme="@style/StripePaymentSheetDefaultTheme"
+115-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:11:13-66
+116            android:windowSoftInputMode="adjustResize" />
+116-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:12:13-55
+117        <activity
+117-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:13:9-17:58
+118            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+118-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:14:13-82
+119            android:exported="false"
+119-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:15:13-37
+120            android:theme="@style/StripePaymentSheetDefaultTheme"
+120-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:16:13-66
+121            android:windowSoftInputMode="adjustResize" />
+121-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:17:13-55
+122        <activity
+122-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:18:9-21:69
+123            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+123-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:19:13-97
+124            android:exported="false"
+124-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:20:13-37
+125            android:theme="@style/StripePaymentSheetDefaultTheme" />
+125-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:21:13-66
+126        <activity
+126-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:22:9-25:69
+127            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+127-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:23:13-105
+128            android:exported="false"
+128-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:24:13-37
+129            android:theme="@style/StripePaymentSheetDefaultTheme" />
+129-->[com.stripe:paymentsheet:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e92b3da71f9fd088b7fcf0a3ff28b0bf/transformed/jetified-paymentsheet-20.25.0/AndroidManifest.xml:25:13-66
+130        <activity
+130-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:8:9-13:58
+131            android:name="com.stripe.android.link.LinkActivity"
+131-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:9:13-64
+132            android:exported="false"
+132-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:10:13-37
+133            android:label="@string/stripe_link"
+133-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:11:13-48
+134            android:theme="@style/StripeLinkBaseTheme"
+134-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:12:13-55
+135            android:windowSoftInputMode="adjustResize" />
+135-->[com.stripe:link:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2d9c8a82293e67e6ae9b0d2cdd2cfa7e/transformed/jetified-link-20.25.0/AndroidManifest.xml:13:13-55
+136        <activity
+136-->[com.stripe:payments-ui-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2b5ae7e403ac6e152b5d018c51914128/transformed/jetified-payments-ui-core-20.25.0/AndroidManifest.xml:8:9-11:69
+137            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+137-->[com.stripe:payments-ui-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2b5ae7e403ac6e152b5d018c51914128/transformed/jetified-payments-ui-core-20.25.0/AndroidManifest.xml:9:13-80
+138            android:exported="false"
+138-->[com.stripe:payments-ui-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2b5ae7e403ac6e152b5d018c51914128/transformed/jetified-payments-ui-core-20.25.0/AndroidManifest.xml:10:13-37
+139            android:theme="@style/StripePaymentSheetDefaultTheme" />
+139-->[com.stripe:payments-ui-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2b5ae7e403ac6e152b5d018c51914128/transformed/jetified-payments-ui-core-20.25.0/AndroidManifest.xml:11:13-66
+140        <activity
+140-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:15:9-18:57
+141            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+141-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:16:13-76
+142            android:exported="false"
+142-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:17:13-37
+143            android:theme="@style/StripeDefaultTheme" />
+143-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:18:13-54
+144        <activity
+144-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:19:9-22:57
+145            android:name="com.stripe.android.view.PaymentMethodsActivity"
+145-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:20:13-74
+146            android:exported="false"
+146-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:21:13-37
+147            android:theme="@style/StripeDefaultTheme" />
+147-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:22:13-54
+148        <activity
+148-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:23:9-26:57
+149            android:name="com.stripe.android.view.PaymentFlowActivity"
+149-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:24:13-71
+150            android:exported="false"
+150-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:25:13-37
+151            android:theme="@style/StripeDefaultTheme" />
+151-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:26:13-54
+152        <activity
+152-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:27:9-31:58
+153            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+153-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:28:13-78
+154            android:exported="false"
+154-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:29:13-37
+155            android:theme="@style/StripeDefaultTheme"
+155-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:30:13-54
+156            android:windowSoftInputMode="adjustResize" />
+156-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:31:13-55
+157        <activity
+157-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:32:9-35:61
+158            android:name="com.stripe.android.view.PaymentRelayActivity"
+158-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:33:13-72
+159            android:exported="false"
+159-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:34:13-37
+160            android:theme="@style/StripeTransparentTheme" />
+160-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:35:13-58
+161        <!--
+162        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+163        launched the browser Activity will also handle the return URL deep link.
+164        -->
+165        <activity
+165-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:41:9-45:61
+166            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+166-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:42:13-85
+167            android:exported="false"
+167-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:43:13-37
+168            android:launchMode="singleTask"
+168-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:44:13-44
+169            android:theme="@style/StripeTransparentTheme" />
+169-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:45:13-58
+170        <activity
+170-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:46:9-63:20
+171            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+171-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:47:13-88
+172            android:exported="true"
+172-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:48:13-36
+173            android:launchMode="singleTask"
+173-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:49:13-44
+174            android:theme="@style/StripeTransparentTheme" >
+174-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:50:13-58
+175            <intent-filter>
+175-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:51:13-62:29
+176                <action android:name="android.intent.action.VIEW" />
+176-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:17-69
+176-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:25-66
+177
+178                <category android:name="android.intent.category.DEFAULT" />
+178-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:17-76
+178-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:27-73
+179                <category android:name="android.intent.category.BROWSABLE" />
+179-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:17-78
+179-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:27-75
+180
+181                <!-- Must match `DefaultReturnUrl#value`. -->
+182                <data
+182-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+183                    android:host="payment_return_url"
+183-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+184                    android:path="/com.tiation.riggerhire"
+184-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:60:21-53
+185                    android:scheme="stripesdk" />
+185-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+186            </intent-filter>
+187        </activity>
+188        <activity
+188-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:64:9-67:57
+189            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+189-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:65:13-114
+190            android:exported="false"
+190-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:66:13-37
+191            android:theme="@style/StripeDefaultTheme" />
+191-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:67:13-54
+192        <activity
+192-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:68:9-71:66
+193            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+193-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:69:13-88
+194            android:exported="false"
+194-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:70:13-37
+195            android:theme="@style/StripeGooglePayDefaultTheme" />
+195-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:71:13-63
+196        <activity
+196-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:72:9-75:66
+197            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+197-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:73:13-90
+198            android:exported="false"
+198-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:74:13-37
+199            android:theme="@style/StripeGooglePayDefaultTheme" />
+199-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:75:13-63
+200        <activity
+200-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:76:9-79:66
+201            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+201-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:77:13-103
+202            android:exported="false"
+202-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:78:13-37
+203            android:theme="@style/StripeGooglePayDefaultTheme" />
+203-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:79:13-63
+204        <activity
+204-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:80:9-83:68
+205            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+205-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:81:13-107
+206            android:exported="false"
+206-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:82:13-37
+207            android:theme="@style/StripePayLauncherDefaultTheme" />
+207-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:83:13-65
+208        <activity
+208-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:84:9-87:61
+209            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+209-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:85:13-97
+210            android:exported="false"
+210-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:86:13-37
+211            android:theme="@style/StripeTransparentTheme" />
+211-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:87:13-58
+212        <activity
+212-->[com.stripe:stripe-3ds2-android:6.1.7] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a8f25b6d14b6a41fdbde6aa2538ab5b3/transformed/jetified-stripe-3ds2-android-6.1.7/AndroidManifest.xml:8:9-11:54
+213            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+213-->[com.stripe:stripe-3ds2-android:6.1.7] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a8f25b6d14b6a41fdbde6aa2538ab5b3/transformed/jetified-stripe-3ds2-android-6.1.7/AndroidManifest.xml:9:13-81
+214            android:exported="false"
+214-->[com.stripe:stripe-3ds2-android:6.1.7] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a8f25b6d14b6a41fdbde6aa2538ab5b3/transformed/jetified-stripe-3ds2-android-6.1.7/AndroidManifest.xml:10:13-37
+215            android:theme="@style/Stripe3DS2Theme" />
+215-->[com.stripe:stripe-3ds2-android:6.1.7] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a8f25b6d14b6a41fdbde6aa2538ab5b3/transformed/jetified-stripe-3ds2-android-6.1.7/AndroidManifest.xml:11:13-51
+216        <activity
+216-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:21:9-64:20
+217            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+217-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:22:13-109
+218            android:exported="true" >
+218-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:23:13-36
+219            <intent-filter>
+219-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:24:13-63:29
+220                <action android:name="android.intent.action.VIEW" />
+220-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:17-69
+220-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:25-66
+221
+222                <category android:name="android.intent.category.DEFAULT" />
+222-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:17-76
+222-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:27-73
+223                <category android:name="android.intent.category.BROWSABLE" />
+223-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:17-78
+223-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:27-75
+224
+225                <!-- Returning from app2app: return_url is triggered to reopen web AuthFlow and poll accounts. -->
+226                <data
+226-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+227                    android:host="link-accounts"
+227-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+228                    android:pathPrefix="/com.tiation.riggerhire/authentication_return"
+229                    android:scheme="stripe-auth" />
+229-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+230
+231                <!-- Returning from app2app: return_url is triggered to reopen native AuthFlow and poll accounts. -->
+232                <data
+232-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+233                    android:host="link-native-accounts"
+233-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+234                    android:pathPrefix="/com.tiation.riggerhire/authentication_return"
+235                    android:scheme="stripe-auth" />
+235-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+236
+237                <!-- End of web AuthFlow success and cancel URIs that begin with "stripe-auth://link-accounts/{app-id}/...” -->
+238                <data
+238-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+239                    android:host="link-accounts"
+239-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+240                    android:path="/com.tiation.riggerhire/success"
+240-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:60:21-53
+241                    android:scheme="stripe-auth" />
+241-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+242                <data
+242-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+243                    android:host="link-accounts"
+243-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+244                    android:path="/com.tiation.riggerhire/cancel"
+244-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:60:21-53
+245                    android:scheme="stripe-auth" />
+245-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+246
+247                <!-- Opening app2app: Web flow triggers stripe-auth://native-redirect/{app-id}/http://web-that-redirects-to-native -->
+248                <data
+248-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+249                    android:host="native-redirect"
+249-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+250                    android:pathPrefix="/com.tiation.riggerhire"
+251                    android:scheme="stripe-auth" />
+251-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+252
+253                <!-- Accepts success/cancel/fail URIs that begin with "stripe://auth-redirect” -->
+254                <data
+254-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+255                    android:host="auth-redirect"
+255-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+256                    android:pathPrefix="/com.tiation.riggerhire"
+257                    android:scheme="stripe" />
+257-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+258            </intent-filter>
+259        </activity>
+260        <activity
+260-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:65:9-68:57
+261            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+261-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:66:13-101
+262            android:exported="false"
+262-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:67:13-37
+263            android:theme="@style/StripeDefaultTheme" />
+263-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:68:13-54
+264        <activity
+264-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:69:9-73:58
+265            android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity"
+265-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:70:13-110
+266            android:exported="false"
+266-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:71:13-37
+267            android:theme="@style/StripeDefaultTheme"
+267-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:72:13-54
+268            android:windowSoftInputMode="adjustResize" />
+268-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:73:13-55
+269
+270        <provider
+270-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:75:9-79:43
+271            android:name="com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer"
+271-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:76:13-114
+272            android:authorities="com.tiation.riggerhire.financialconnections-init"
+272-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:77:13-77
+273            android:exported="false"
+273-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:78:13-37
+274            android:multiprocess="true" />
+274-->[com.stripe:financial-connections:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d0141e041e9783216f683639f8b2b53c/transformed/jetified-financial-connections-20.25.0/AndroidManifest.xml:79:13-40
+275        <!--
+276        Service for holding metadata. Cannot be instantiated.
+277        Metadata will be merged from other manifests.
+278        -->
+279        <service
+279-->[androidx.camera:camera-core:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cf25909a0592e468a030044026692be3/transformed/jetified-camera-core-1.3.1/AndroidManifest.xml:29:9-33:78
+280            android:name="androidx.camera.core.impl.MetadataHolderService"
+280-->[androidx.camera:camera-core:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cf25909a0592e468a030044026692be3/transformed/jetified-camera-core-1.3.1/AndroidManifest.xml:30:13-75
+281            android:enabled="false"
+281-->[androidx.camera:camera-core:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cf25909a0592e468a030044026692be3/transformed/jetified-camera-core-1.3.1/AndroidManifest.xml:31:13-36
+282            android:exported="false" >
+282-->[androidx.camera:camera-core:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cf25909a0592e468a030044026692be3/transformed/jetified-camera-core-1.3.1/AndroidManifest.xml:32:13-37
+283            <meta-data
+283-->[androidx.camera:camera-camera2:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/c0dcedc6f682966132bac9bc5406b181/transformed/jetified-camera-camera2-1.3.1/AndroidManifest.xml:30:13-32:89
+284                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+284-->[androidx.camera:camera-camera2:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/c0dcedc6f682966132bac9bc5406b181/transformed/jetified-camera-camera2-1.3.1/AndroidManifest.xml:31:17-103
+285                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+285-->[androidx.camera:camera-camera2:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/c0dcedc6f682966132bac9bc5406b181/transformed/jetified-camera-camera2-1.3.1/AndroidManifest.xml:32:17-86
+286        </service>
+287
+288        <activity
+288-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/0d98c63763ccf8d7d5f61ec05b64ad6d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+289            android:name="androidx.compose.ui.tooling.PreviewActivity"
+289-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/0d98c63763ccf8d7d5f61ec05b64ad6d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+290            android:exported="true" />
+290-->[androidx.compose.ui:ui-tooling-android:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/0d98c63763ccf8d7d5f61ec05b64ad6d/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+291
+292        <provider
+292-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+293            android:name="androidx.startup.InitializationProvider"
+293-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
+294            android:authorities="com.tiation.riggerhire.androidx-startup"
+294-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
+295            android:exported="false" >
+295-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
+296            <meta-data
+296-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+297                android:name="androidx.work.WorkManagerInitializer"
+297-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
+298                android:value="androidx.startup" />
+298-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
+299            <meta-data
+299-->[androidx.emoji2:emoji2:1.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2eda4e4159e7d9056027f0dfebdbc81d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+300                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+300-->[androidx.emoji2:emoji2:1.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2eda4e4159e7d9056027f0dfebdbc81d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+301                android:value="androidx.startup" />
+301-->[androidx.emoji2:emoji2:1.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2eda4e4159e7d9056027f0dfebdbc81d/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+302            <meta-data
+302-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2de445db2f8b2da739cc1c40f9024fb5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+303                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+303-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2de445db2f8b2da739cc1c40f9024fb5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+304                android:value="androidx.startup" />
+304-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/2de445db2f8b2da739cc1c40f9024fb5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+305            <meta-data
+305-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+306                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+306-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+307                android:value="androidx.startup" />
+307-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+308        </provider>
+309
+310        <service
+310-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+311            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+311-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+312            android:directBootAware="false"
+312-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+313            android:enabled="@bool/enable_system_alarm_service_default"
+313-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+314            android:exported="false" />
+314-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+315        <service
+315-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+316            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+316-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+317            android:directBootAware="false"
+317-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+318            android:enabled="@bool/enable_system_job_service_default"
+318-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+319            android:exported="true"
+319-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+320            android:permission="android.permission.BIND_JOB_SERVICE" />
+320-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+321        <service
+321-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+322            android:name="androidx.work.impl.foreground.SystemForegroundService"
+322-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+323            android:directBootAware="false"
+323-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+324            android:enabled="@bool/enable_system_foreground_service_default"
+324-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+325            android:exported="false" />
+325-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+326
+327        <receiver
+327-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+328            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+328-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+329            android:directBootAware="false"
+329-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+330            android:enabled="true"
+330-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+331            android:exported="false" />
+331-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+332        <receiver
+332-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+333            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+333-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+334            android:directBootAware="false"
+334-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+335            android:enabled="false"
+335-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+336            android:exported="false" >
+336-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+337            <intent-filter>
+337-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+338                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+338-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+338-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+339                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+339-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+339-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+340            </intent-filter>
+341        </receiver>
+342        <receiver
+342-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+343            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+343-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+344            android:directBootAware="false"
+344-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+345            android:enabled="false"
+345-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+346            android:exported="false" >
+346-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+347            <intent-filter>
+347-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+348                <action android:name="android.intent.action.BATTERY_OKAY" />
+348-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+348-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+349                <action android:name="android.intent.action.BATTERY_LOW" />
+349-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+349-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+350            </intent-filter>
+351        </receiver>
+352        <receiver
+352-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+353            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+353-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+354            android:directBootAware="false"
+354-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+355            android:enabled="false"
+355-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+356            android:exported="false" >
+356-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+357            <intent-filter>
+357-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+358                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+358-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+358-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+359                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+359-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+359-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+360            </intent-filter>
+361        </receiver>
+362        <receiver
+362-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+363            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+363-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+364            android:directBootAware="false"
+364-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+365            android:enabled="false"
+365-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+366            android:exported="false" >
+366-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+367            <intent-filter>
+367-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+368                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+368-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+368-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+369            </intent-filter>
+370        </receiver>
+371        <receiver
+371-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+372            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+372-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+373            android:directBootAware="false"
+373-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+374            android:enabled="false"
+374-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+375            android:exported="false" >
+375-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+376            <intent-filter>
+376-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+377                <action android:name="android.intent.action.BOOT_COMPLETED" />
+377-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+377-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+378                <action android:name="android.intent.action.TIME_SET" />
+378-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+378-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+379                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+379-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+379-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+380            </intent-filter>
+381        </receiver>
+382        <receiver
+382-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+383            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+383-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+384            android:directBootAware="false"
+384-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+385            android:enabled="@bool/enable_system_alarm_service_default"
+385-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+386            android:exported="false" >
+386-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+387            <intent-filter>
+387-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+388                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+388-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+388-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+389            </intent-filter>
+390        </receiver>
+391        <receiver
+391-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+392            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+392-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+393            android:directBootAware="false"
+393-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+394            android:enabled="true"
+394-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+395            android:exported="true"
+395-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+396            android:permission="android.permission.DUMP" >
+396-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+397            <intent-filter>
+397-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+398                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+398-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+398-->[androidx.work:work-runtime:2.9.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/b99349f6248661f6abedb0ee0caee445/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+399            </intent-filter>
+400        </receiver>
+401
+402        <service
+402-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:8:9-14:19
+403            android:name="com.google.firebase.components.ComponentDiscoveryService"
+403-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:9:13-84
+404            android:directBootAware="true"
+404-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+405            android:exported="false" >
+405-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:10:13-37
+406            <meta-data
+406-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:11:13-13:85
+407                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsLegacyRegistrar"
+407-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:12:17-129
+408                android:value="com.google.firebase.components.ComponentRegistrar" />
+408-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/bb76f6e01763fc3be773afb2241f6dd3/transformed/jetified-firebase-analytics-ktx-21.5.0/AndroidManifest.xml:13:17-82
+409            <meta-data
+409-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cfed5f3ffa383f552b9a84b6c64d394a/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:26:13-28:85
+410                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+410-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cfed5f3ffa383f552b9a84b6c64d394a/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:27:17-129
+411                android:value="com.google.firebase.components.ComponentRegistrar" />
+411-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/cfed5f3ffa383f552b9a84b6c64d394a/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:28:17-82
+412            <meta-data
+412-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:57:13-59:85
+413                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+413-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:58:17-122
+414                android:value="com.google.firebase.components.ComponentRegistrar" />
+414-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:59:17-82
+415            <meta-data
+415-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:60:13-62:85
+416                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+416-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:61:17-119
+417                android:value="com.google.firebase.components.ComponentRegistrar" />
+417-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:62:17-82
+418            <meta-data
+418-->[com.google.firebase:firebase-firestore-ktx:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/7e429b159397c8ee36c76f466df5c9d6/transformed/jetified-firebase-firestore-ktx-24.10.0/AndroidManifest.xml:12:13-14:85
+419                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar"
+419-->[com.google.firebase:firebase-firestore-ktx:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/7e429b159397c8ee36c76f466df5c9d6/transformed/jetified-firebase-firestore-ktx-24.10.0/AndroidManifest.xml:13:17-129
+420                android:value="com.google.firebase.components.ComponentRegistrar" />
+420-->[com.google.firebase:firebase-firestore-ktx:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/7e429b159397c8ee36c76f466df5c9d6/transformed/jetified-firebase-firestore-ktx-24.10.0/AndroidManifest.xml:14:17-82
+421            <meta-data
+421-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:17:13-19:85
+422                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+422-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:18:17-122
+423                android:value="com.google.firebase.components.ComponentRegistrar" />
+423-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:19:17-82
+424            <meta-data
+424-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:20:13-22:85
+425                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+425-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:21:17-111
+426                android:value="com.google.firebase.components.ComponentRegistrar" />
+426-->[com.google.firebase:firebase-firestore:24.10.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/16bc4eed2070d372648c9318d1a5eced/transformed/jetified-firebase-firestore-24.10.0/AndroidManifest.xml:22:17-82
+427            <meta-data
+427-->[com.google.firebase:firebase-auth-ktx:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/070b939a528c848c5b3edd529cd20970/transformed/jetified-firebase-auth-ktx-22.3.0/AndroidManifest.xml:11:13-13:85
+428                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+428-->[com.google.firebase:firebase-auth-ktx:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/070b939a528c848c5b3edd529cd20970/transformed/jetified-firebase-auth-ktx-22.3.0/AndroidManifest.xml:12:17-119
+429                android:value="com.google.firebase.components.ComponentRegistrar" />
+429-->[com.google.firebase:firebase-auth-ktx:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/070b939a528c848c5b3edd529cd20970/transformed/jetified-firebase-auth-ktx-22.3.0/AndroidManifest.xml:13:17-82
+430            <meta-data
+430-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:69:13-71:85
+431                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+431-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:70:17-109
+432                android:value="com.google.firebase.components.ComponentRegistrar" />
+432-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:71:17-82
+433            <meta-data
+433-->[com.google.firebase:firebase-crashlytics-ktx:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/f5a6bfb7caba591e042eaed228992cc6/transformed/jetified-firebase-crashlytics-ktx-18.6.0/AndroidManifest.xml:24:13-26:85
+434                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+434-->[com.google.firebase:firebase-crashlytics-ktx:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/f5a6bfb7caba591e042eaed228992cc6/transformed/jetified-firebase-crashlytics-ktx-18.6.0/AndroidManifest.xml:25:17-130
+435                android:value="com.google.firebase.components.ComponentRegistrar" />
+435-->[com.google.firebase:firebase-crashlytics-ktx:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/f5a6bfb7caba591e042eaed228992cc6/transformed/jetified-firebase-crashlytics-ktx-18.6.0/AndroidManifest.xml:26:17-82
+436            <meta-data
+436-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:15:13-17:85
+437                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+437-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:16:17-126
+438                android:value="com.google.firebase.components.ComponentRegistrar" />
+438-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:17:17-82
+439            <meta-data
+439-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:18:13-20:85
+440                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+440-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:19:17-115
+441                android:value="com.google.firebase.components.ComponentRegistrar" />
+441-->[com.google.firebase:firebase-crashlytics:18.6.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/161786dc4d886bef9be59044e9336fde/transformed/jetified-firebase-crashlytics-18.6.0/AndroidManifest.xml:20:17-82
+442            <meta-data
+442-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:29:13-31:85
+443                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+443-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:30:17-117
+444                android:value="com.google.firebase.components.ComponentRegistrar" />
+444-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:31:17-82
+445            <meta-data
+445-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:37:13-39:85
+446                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+446-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:38:17-139
+447                android:value="com.google.firebase.components.ComponentRegistrar" />
+447-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:39:17-82
+448            <meta-data
+448-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+449                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+449-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+450                android:value="com.google.firebase.components.ComponentRegistrar" />
+450-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+451            <meta-data
+451-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+452                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+452-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+453                android:value="com.google.firebase.components.ComponentRegistrar" />
+453-->[com.google.firebase:firebase-installations:17.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/db699f60109dd4697d755a8ccf862813/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+454            <meta-data
+454-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/37515239b0b53792332a4000b2f12a6d/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+455                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+455-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/37515239b0b53792332a4000b2f12a6d/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+456                android:value="com.google.firebase.components.ComponentRegistrar" />
+456-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/37515239b0b53792332a4000b2f12a6d/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+457            <meta-data
+457-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+458                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+458-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+459                android:value="com.google.firebase.components.ComponentRegistrar" />
+459-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+460            <meta-data
+460-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/dfaf75d19d026abfadb90eb9afea69ea/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
+461                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+461-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/dfaf75d19d026abfadb90eb9afea69ea/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
+462                android:value="com.google.firebase.components.ComponentRegistrar" />
+462-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/dfaf75d19d026abfadb90eb9afea69ea/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
+463        </service>
+464
+465        <receiver
+465-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:29:9-33:20
+466            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+466-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:30:13-85
+467            android:enabled="true"
+467-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:31:13-35
+468            android:exported="false" >
+468-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:32:13-37
+469        </receiver>
+470
+471        <service
+471-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:35:9-38:40
+472            android:name="com.google.android.gms.measurement.AppMeasurementService"
+472-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:36:13-84
+473            android:enabled="true"
+473-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:37:13-35
+474            android:exported="false" />
+474-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:38:13-37
+475        <service
+475-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:39:9-43:72
+476            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+476-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:40:13-87
+477            android:enabled="true"
+477-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:41:13-35
+478            android:exported="false"
+478-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:42:13-37
+479            android:permission="android.permission.BIND_JOB_SERVICE" />
+479-->[com.google.android.gms:play-services-measurement:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/6f398c5ce8d9ac7c3ea23e4a950d3d2b/transformed/jetified-play-services-measurement-21.5.0/AndroidManifest.xml:43:13-69
+480
+481        <receiver
+481-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:29:9-40:20
+482            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+482-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:30:13-78
+483            android:exported="true"
+483-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:31:13-36
+484            android:permission="com.google.android.c2dm.permission.SEND" >
+484-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:32:13-73
+485            <intent-filter>
+485-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:33:13-35:29
+486                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+486-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:34:17-81
+486-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:34:25-78
+487            </intent-filter>
+488
+489            <meta-data
+489-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:37:13-39:40
+490                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+490-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:38:17-92
+491                android:value="true" />
+491-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:39:17-37
+492        </receiver>
+493        <!--
+494             FirebaseMessagingService performs security checks at runtime,
+495             but set to not exported to explicitly avoid allowing another app to call it.
+496        -->
+497        <service
+497-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:46:9-53:19
+498            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+498-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:47:13-82
+499            android:directBootAware="true"
+499-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:48:13-43
+500            android:exported="false" >
+500-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:49:13-37
+501            <intent-filter android:priority="-500" >
+501-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:50:13-52:29
+501-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:50:28-51
+502                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+502-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:51:17-78
+502-->[com.google.firebase:firebase-messaging:23.4.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/ae325a438e7df8b7404a0e8b1c0ccde5/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:51:25-75
+503            </intent-filter>
+504        </service> <!-- Needs to be explicitly declared on P+ -->
+505        <uses-library
+505-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+506            android:name="org.apache.http.legacy"
+506-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+507            android:required="false" />
+507-->[com.google.android.gms:play-services-maps:18.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/a64295e5564bd6985936b593a0967226/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+508
+509        <activity
+509-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:29:9-46:20
+510            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+510-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:30:13-80
+511            android:excludeFromRecents="true"
+511-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:31:13-46
+512            android:exported="true"
+512-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:32:13-36
+513            android:launchMode="singleTask"
+513-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:33:13-44
+514            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+514-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:34:13-72
+515            <intent-filter>
+515-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:35:13-45:29
+516                <action android:name="android.intent.action.VIEW" />
+516-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:17-69
+516-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:25-66
+517
+518                <category android:name="android.intent.category.DEFAULT" />
+518-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:17-76
+518-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:27-73
+519                <category android:name="android.intent.category.BROWSABLE" />
+519-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:17-78
+519-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:27-75
+520
+521                <data
+521-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+522                    android:host="firebase.auth"
+522-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+523                    android:path="/"
+523-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:60:21-53
+524                    android:scheme="genericidp" />
+524-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+525            </intent-filter>
+526        </activity>
+527        <activity
+527-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:47:9-64:20
+528            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+528-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:48:13-79
+529            android:excludeFromRecents="true"
+529-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:49:13-46
+530            android:exported="true"
+530-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:50:13-36
+531            android:launchMode="singleTask"
+531-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:51:13-44
+532            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+532-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:52:13-72
+533            <intent-filter>
+533-->[com.google.firebase:firebase-auth:22.3.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d225325bd5497bc8946352a9d5e34332/transformed/jetified-firebase-auth-22.3.0/AndroidManifest.xml:53:13-63:29
+534                <action android:name="android.intent.action.VIEW" />
+534-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:17-69
+534-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:52:25-66
+535
+536                <category android:name="android.intent.category.DEFAULT" />
+536-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:17-76
+536-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:54:27-73
+537                <category android:name="android.intent.category.BROWSABLE" />
+537-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:17-78
+537-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:55:27-75
+538
+539                <data
+539-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:58:17-61:50
+540                    android:host="firebase.auth"
+540-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:59:21-54
+541                    android:path="/"
+541-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:60:21-53
+542                    android:scheme="recaptcha" />
+542-->[com.stripe:payments-core:20.25.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fbbb6da0ee75ba59fc05262ea8f6a528/transformed/jetified-payments-core-20.25.0/AndroidManifest.xml:61:21-47
+543            </intent-filter>
+544        </activity>
+545        <activity
+545-->[com.google.android.gms:play-services-base:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3201eed3c3baac60a560cac2e41bc26e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+546            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+546-->[com.google.android.gms:play-services-base:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3201eed3c3baac60a560cac2e41bc26e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+547            android:exported="false"
+547-->[com.google.android.gms:play-services-base:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3201eed3c3baac60a560cac2e41bc26e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+548            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+548-->[com.google.android.gms:play-services-base:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3201eed3c3baac60a560cac2e41bc26e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+549
+550        <service
+550-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:22:9-25:40
+551            android:name="com.google.firebase.sessions.SessionLifecycleService"
+551-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:23:13-80
+552            android:enabled="true"
+552-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:24:13-35
+553            android:exported="false" />
+553-->[com.google.firebase:firebase-sessions:1.2.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/4f172b5e104c074750d629d3e5b5c09b/transformed/jetified-firebase-sessions-1.2.0/AndroidManifest.xml:25:13-37
+554
+555        <property
+555-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:30:9-32:61
+556            android:name="android.adservices.AD_SERVICES_CONFIG"
+556-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:31:13-65
+557            android:resource="@xml/ga_ad_services_config" />
+557-->[com.google.android.gms:play-services-measurement-api:21.5.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3e1b54ebe605b47dd609d31a7ffcadec/transformed/jetified-play-services-measurement-api-21.5.0/AndroidManifest.xml:32:13-58
+558
+559        <provider
+559-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+560            android:name="com.google.firebase.provider.FirebaseInitProvider"
+560-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+561            android:authorities="com.tiation.riggerhire.firebaseinitprovider"
+561-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+562            android:directBootAware="true"
+562-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+563            android:exported="false"
+563-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+564            android:initOrder="100" />
+564-->[com.google.firebase:firebase-common:20.4.2] /Users/tiaastor/.gradle/caches/8.14.3/transforms/48f2020e54b0e7a23abe3554a7fdb0ac/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+565
+566        <service
+566-->[androidx.room:room-runtime:2.6.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/460cdc16172594de84d223e50c2d9502/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+567            android:name="androidx.room.MultiInstanceInvalidationService"
+567-->[androidx.room:room-runtime:2.6.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/460cdc16172594de84d223e50c2d9502/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+568            android:directBootAware="true"
+568-->[androidx.room:room-runtime:2.6.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/460cdc16172594de84d223e50c2d9502/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+569            android:exported="false" />
+569-->[androidx.room:room-runtime:2.6.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/460cdc16172594de84d223e50c2d9502/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+570
+571        <uses-library
+571-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/tiaastor/.gradle/caches/8.14.3/transforms/39d0e0e61892e6ba2823e69d2da196d0/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+572            android:name="android.ext.adservices"
+572-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/tiaastor/.gradle/caches/8.14.3/transforms/39d0e0e61892e6ba2823e69d2da196d0/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+573            android:required="false" />
+573-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/tiaastor/.gradle/caches/8.14.3/transforms/39d0e0e61892e6ba2823e69d2da196d0/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+574
+575        <meta-data
+575-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3a68f10f653d0146a7415802750be016/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+576            android:name="com.google.android.gms.version"
+576-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3a68f10f653d0146a7415802750be016/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+577            android:value="@integer/google_play_services_version" />
+577-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3a68f10f653d0146a7415802750be016/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+578
+579        <activity
+579-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e8273e97c3c69016de22503be24b5cee/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:23:9-25:39
+580            android:name="androidx.activity.ComponentActivity"
+580-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e8273e97c3c69016de22503be24b5cee/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:24:13-63
+581            android:exported="true" />
+581-->[androidx.compose.ui:ui-test-manifest:1.6.8] /Users/tiaastor/.gradle/caches/8.14.3/transforms/e8273e97c3c69016de22503be24b5cee/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:25:13-36
+582
+583        <service
+583-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+584            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+584-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+585            android:exported="false" >
+585-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+586            <meta-data
+586-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+587                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+587-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+588                android:value="cct" />
+588-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/631c0f2bc48304e70580a168a4b9a47a/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+589        </service>
+590
+591        <receiver
+591-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+592            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+592-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+593            android:directBootAware="false"
+593-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+594            android:enabled="true"
+594-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+595            android:exported="true"
+595-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+596            android:permission="android.permission.DUMP" >
+596-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+597            <intent-filter>
+597-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+598                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+598-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+598-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+599            </intent-filter>
+600            <intent-filter>
+600-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+601                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+601-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+601-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+602            </intent-filter>
+603            <intent-filter>
+603-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+604                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+604-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+604-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+605            </intent-filter>
+606            <intent-filter>
+606-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+607                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+607-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+607-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/tiaastor/.gradle/caches/8.14.3/transforms/d60e61f4233939c89d8a383ede865643/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+608            </intent-filter>
+609        </receiver>
+610
+611        <service
+611-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+612            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+612-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+613            android:exported="false"
+613-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+614            android:permission="android.permission.BIND_JOB_SERVICE" >
+614-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+615        </service>
+616
+617        <receiver
+617-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+618            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+618-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+619            android:exported="false" />
+619-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/tiaastor/.gradle/caches/8.14.3/transforms/3364e83af6f84602aef67c8706d64b3b/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+620
+621        <meta-data
+621-->[com.google.android.instantapps:instantapps:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fc3baf313a8005c522b106250c33e4d9/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:10:9-12:33
+622            android:name="aia-compat-api-min-version"
+622-->[com.google.android.instantapps:instantapps:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fc3baf313a8005c522b106250c33e4d9/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:11:13-54
+623            android:value="1" />
+623-->[com.google.android.instantapps:instantapps:1.1.0] /Users/tiaastor/.gradle/caches/8.14.3/transforms/fc3baf313a8005c522b106250c33e4d9/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:12:13-30
+624    </application>
+625
+626</manifest>

@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.tiation.riggerhire.app-mergeDebugResources-105:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/Users/tiaastor/.gradle/caches/8.14.3/transforms/16ccf507744fb2fdeae097a7e7e1fff4/transformed/jetified-core-splashscreen-1.0.1/res/values-v29/values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        }
+    ]
+}

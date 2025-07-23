@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.tiation.riggerhire.app-mergeDebugResources-105:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/tiaastor/.gradle/caches/8.14.3/transforms/9477d5bca2e5985c327857ee93738d7f/transformed/material-1.11.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        }
+    ]
+}
