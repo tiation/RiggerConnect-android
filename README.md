@@ -20,6 +20,28 @@
   **Connecting certified riggers with mining, construction, and industrial projects across Western Australia**
 </div>
 
+## 📍 Repository Location & Structure
+
+**Current Location**: `/Users/tiaastor/Github/tiation-repos/RiggerConnect-android/`
+
+This repository is part of the **Tiation Enterprise Repository Structure**, specifically designed to house **ChaseWhiteRabbit NGO's** technology initiatives following enterprise-grade development practices.
+
+### 🏗️ Enterprise Ecosystem
+- **Repository Collection**: [Enterprise Repository Index](../ENTERPRISE_REPOSITORY_INDEX.md)
+- **Web Platform**: [RiggerConnect-web](../RiggerConnect-web/)
+- **iOS Companion**: [RiggerConnect-ios](../RiggerConnect-ios/)
+- **Backend Services**: [RiggerBackend](../RiggerBackend/)
+- **Shared Libraries**: [RiggerShared](../RiggerShared/)
+- **Operations Hub**: [RiggerHub-android](../RiggerHub-android/), [RiggerHub-web](../RiggerHub-web/)
+
+### 🌟 NGO Integration
+As a **ChaseWhiteRabbit NGO Initiative**, this project adheres to:
+- ✅ **Enterprise-grade development practices**
+- ✅ **Ethical technology standards**
+- ✅ **Worker empowerment focus**
+- ✅ **DevOps best practices with CI/CD**
+- ✅ **Open development transparency**
+
 ## 📱 Screenshots
 
 <div align="center">
