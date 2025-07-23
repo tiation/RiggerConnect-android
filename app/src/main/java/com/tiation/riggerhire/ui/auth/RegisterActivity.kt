@@ -236,7 +236,7 @@ class RegisterActivity : ComponentActivity() {
                 Button(
                     onClick = {  
                         isLoading = true
-performRegistration(email, password, confirmPassword) { success, error ->
+                        performRegistration(email, password, confirmPassword) { success, error ->
                             isLoading = false
                             if (success) {
                                 startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
@@ -299,7 +299,7 @@ performRegistration(email, password, confirmPassword) { success, error ->
         email: String, 
         password: String, 
         confirmPassword: String, 
-        callback: (Boolean, String?) -e Unit
+        callback: (Boolean, String?) -> Unit
     ) {
         // TODO: Implement actual registration logic with backend API
         // This would typically involve:
@@ -310,7 +310,7 @@ performRegistration(email, password, confirmPassword) { success, error ->
         // 5. Handle success/error cases
         
         // Simulated registration for demo
-        if (email.contains("@") e00password.length e003 e00password == confirmPassword) {
+        if (email.contains("@") && password.length >= 3 && password == confirmPassword) {
             callback(true, null)
         } else {
             callback(false, "Invalid email or mismatched passwords")
