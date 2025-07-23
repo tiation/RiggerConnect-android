@@ -1,0 +1,60 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  ANDROID_COMPILE_SDK: "34"
+  ANDROID_BUILD_TOOLS: "34.0.0"
+  ANDROID_SDK_TOOLS: "9477386"
+
+cache:
+  paths:
+    - .gradle/wrapper
+    - .gradle/caches
+
+before_script:
+  - chmod +x ./gradlew
+
+lint:
+  stage: test
+  script:
+    - ./gradlew lint
+  artifacts:
+    reports:
+      junit: app/build/test-results/test/TEST-*.xml
+
+unit_tests:
+  stage: test
+  script:
+    - ./gradlew test
+  artifacts:
+    reports:
+      junit: app/build/test-results/test/TEST-*.xml
+
+build_debug:
+  stage: build
+  script:
+    - ./gradlew assembleDebug
+  artifacts:
+    paths:
+      - app/build/outputs/apk/debug/
+    expire_in: 1 week
+
+build_release:
+  stage: build
+  script:
+    - ./gradlew assembleRelease
+  artifacts:
+    paths:
+      - app/build/outputs/apk/release/
+    expire_in: 1 month
+  only:
+    - main
+
+docker_build:
+  stage: deploy
+  script:
+    - docker build -t riggerconnect-android .
+  only:
+    - main
