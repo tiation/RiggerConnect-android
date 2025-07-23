@@ -115,7 +115,9 @@ The Android app implements all 47 screens from the iOS version with identical fu
 - **Analytics**: Firebase Analytics
 - **Crash Reporting**: Firebase Crashlytics
 - **Payment Processing**: Stripe SDK integration
-- **CI/CD**: GitHub Actions + Fastlane
+- **CI/CD**: GitLab CI/CD with Fastlane automation
+- **Code Quality**: SonarQube analysis and Detekt static analysis
+- **Security**: OWASP Mobile Security Testing
 
 ## 🎨 Dark Neon Theme
 
