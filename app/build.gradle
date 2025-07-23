@@ -112,10 +112,10 @@ dependencies {
     // Lottie animations
     implementation 'com.airbnb.android:lottie-compose:6.3.0'
     
-    // Stripe SDK for payments
-    implementation('com.stripe:stripe-android:20.25.0') {
-        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15to18'
-    }
+    // Stripe SDK for payments - temporarily commented out
+    // implementation('com.stripe:stripe-android:20.25.0') {
+    //     exclude group: 'org.bouncycastle', module: 'bcprov-jdk15to18'
+    // }
     
     // Biometric authentication
     implementation 'androidx.biometric:biometric:1.1.0'
