@@ -23,6 +23,8 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
 import com.tiation.riggerhire.ui.theme.RiggerHireTheme
 
 /**
@@ -239,7 +241,7 @@ class RegisterActivity : ComponentActivity() {
                         performRegistration(email, password, confirmPassword) { success, error ->
                             isLoading = false
                             if (success) {
-                                startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
+                                startActivity(Intent(this@RegisterActivity, com.tiation.riggerhire.ui.MainActivity::class.java))
                                 finish()
                             } else {
                                 errorMessage = error ?: "Registration failed"
@@ -286,7 +288,7 @@ class RegisterActivity : ComponentActivity() {
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.clickable {
-                            startActivity(Intent(this, LoginActivity::class.java))
+                            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                             finish()
                         }
                     )

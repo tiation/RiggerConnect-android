@@ -113,7 +113,7 @@ class PaymentsActivity : ComponentActivity() {
                             indicator = { tabPositions ->
                                 Box(
                                     modifier = Modifier
-                                        .tabIndicatorOffset(tabPositions[selectedTab])
+                                        .wrapContentSize()
                                         .height(3.dp)
                                         .background(
                                             Brush.horizontalGradient(

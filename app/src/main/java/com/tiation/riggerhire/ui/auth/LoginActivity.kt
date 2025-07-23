@@ -227,7 +227,7 @@ class LoginActivity : ComponentActivity() {
                         color = Color(0xFF00FFFF),
                         fontSize = 14.sp,
                         modifier = Modifier.clickable {
-                            context.startActivity(Intent(context, ForgotPasswordActivity::class.java))
+                            // TODO: Implement forgot password functionality
                         }
                     )
                 }
@@ -251,7 +251,7 @@ class LoginActivity : ComponentActivity() {
                         performLogin(email, password, rememberMe) { success, error ->
                             isLoading = false
                             if (success) {
-                                context.startActivity(Intent(context, MainActivity::class.java))
+                                context.startActivity(Intent(context, com.tiation.riggerhire.ui.MainActivity::class.java))
                                 finish()
                             } else {
                                 errorMessage = error ?: "Login failed"
@@ -372,7 +372,7 @@ class LoginActivity : ComponentActivity() {
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
                     // Authentication succeeded - proceed to main app
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, com.tiation.riggerhire.ui.MainActivity::class.java))
                     finish()
                 }
                 
