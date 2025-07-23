@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
 // apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-parcelize'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     namespace 'com.tiation.riggerhire'
@@ -79,6 +80,10 @@ dependencies {
 
     // JWT Authentication
     implementation 'com.auth0.android:jwtdecode:2.0.1'
+    
+    // Hilt for dependency injection
+    implementation 'com.google.dagger:hilt-android:2.48'
+    implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
 
     // Networking with Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
