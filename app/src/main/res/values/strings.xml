@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RiggerHire</string>
+    <string name="app_name">RiggerConnect WA</string>
     
     <!-- App Description -->
-    <string name="app_description">Australia\'s Premier Rigging Jobs Platform</string>
-    <string name="app_tagline">Connecting certified riggers with mining, construction, and industrial projects across the Pilbara region</string>
+    <string name="app_description">Western Australia\'s Premier Rigging Network</string>
+    <string name="app_tagline">Connecting certified riggers, doggers, and crane operators with mining, construction, and industrial projects across Western Australia</string>
     
     <!-- Navigation -->
     <string name="nav_home">Home</string>
@@ -107,5 +107,31 @@
     <string name="location_kalgoorlie">Kalgoorlie</string>
     <string name="location_newman">Newman</string>
     <string name="location_port_hedland">Port Hedland</string>
+    
+    <!-- Footer & Branding -->
+    <string name="footer_app_title">RiggerConnect WA</string>
+    <string name="footer_tagline">Western Australia\'s Premier Professional Rigging Network</string>
+    <string name="footer_ngo_title">Supporting ChaseWhiteRabbit NGO</string>
+    <string name="footer_ngo_description">Every connection made through RiggerConnect helps fund community initiatives and support those in need across Western Australia.</string>
+    <string name="footer_copyright">© %1$d RiggerConnect WA | A ChaseWhiteRabbit NGO Initiative</string>
+    <string name="footer_developed_by">Developed by Tiation | Hosted on SXC.codes enterprise infrastructure</string>
+    <string name="footer_enterprise_grade">Enterprise Grade • Ethical Technology • DevOps Ready</string>
+    
+    <!-- Footer Links -->
+    <string name="footer_link_about">About Our Mission</string>
+    <string name="footer_link_privacy">Privacy Policy</string>
+    <string name="footer_link_terms">Terms of Service</string>
+    <string name="footer_link_ethics">Ethical Standards</string>
+    <string name="footer_link_help">Help Center</string>
+    <string name="footer_link_contact">Contact Support</string>
+    <string name="footer_link_safety">Safety Standards</string>
+    <string name="footer_link_compliance">WA Compliance</string>
+    
+    <!-- Technology Stack -->
+    <string name="tech_stack_powered_by">Powered by</string>
+    <string name="tech_stack_kotlin">Kotlin</string>
+    <string name="tech_stack_android">Android</string>
+    <string name="tech_stack_supabase">Supabase</string>
+    <string name="tech_stack_material">Material Design</string>
     
 </resources>
