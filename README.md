@@ -48,15 +48,15 @@ As a **ChaseWhiteRabbit NGO Initiative**, this project adheres to:
 
 | Repository | Platform | Description | GitHub SSH URL |
 |------------|----------|-------------|----------------|
-| **RiggerBackend** | API/Backend | Core backend services and APIs for the Rigger ecosystem | `git@github.com:tiation/RiggerBackend.git` |
-| **RiggerConnect-web** | Web | Professional networking platform for construction workers | `git@github.com:tiation/RiggerConnect-web.git` |
-| **RiggerConnect-android** | Android | Native Android mobile networking application | `git@github.com:tiation/RiggerConnect-android.git` |
-| **RiggerConnect-capacitor** | Cross-platform | Cross-platform mobile app built with Ionic Capacitor | `git@github.com:tiation/RiggerConnect-capacitor.git` |
-| **RiggerConnect-ios** | iOS | Native iOS mobile networking application | `git@github.com:tiation/RiggerConnect-ios.git` |
-| **RiggerHub-web** | Web | Operations management hub for business users | `git@github.com:tiation/RiggerHub-web.git` |
-| **RiggerHub-android** | Android | Native Android operations management application | `git@github.com:tiation/RiggerHub-android.git` |
-| **RiggerHub-ios** | iOS | Native iOS operations management application | `git@github.com:tiation/RiggerHub-ios.git` |
-| **RiggerShared** | Multi-platform | Shared libraries, components, and utilities | `git@github.com:tiation/RiggerShared.git` |
+| **RiggerConnect-web** | Web | Business-focused recruitment platform | `git@github.com:tiation/RiggerConnect-web.git` |
+| **RiggerConnect-android** | Android | Mobile business management app | `git@github.com:tiation/RiggerConnect-android.git` |
+| **RiggerConnect-ios** | iOS | Mobile business management app | `git@github.com:tiation/RiggerConnect-ios.git` |
+| **RiggerConnect-capacitor** | Cross-platform | Cross-platform mobile framework | `git@github.com:tiation/RiggerConnect-capacitor.git` |
+| **RiggerHub-web** | Web | Worker-focused job search platform | `git@github.com:tiation/RiggerHub-web.git` |
+| **RiggerHub-android** | Android | Mobile worker app | `git@github.com:tiation/RiggerHub-android.git` |
+| **RiggerHub-ios** | iOS | Mobile worker app | `git@github.com:tiation/RiggerHub-ios.git` |
+| **RiggerBackend** | API/Backend | Core backend services and APIs | `git@github.com:tiation/RiggerBackend.git` |
+| **RiggerShared** | Multi-platform | Shared libraries and components | `git@github.com:tiation/RiggerShared.git` |
 
 ### Enterprise Integration Architecture
 
@@ -391,7 +391,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Discussions**: [GitHub Discussions](https://github.com/tiation/RiggerHireApp-Android/discussions)
 - **Email**: tiatheone@protonmail.com
 
-## 📧 Contact Information
+## 👥 Contact & Team
+
+### Project Leaders
+
+**Jack Jonas** - Karratha Crane Operator & Industry Expert  
+📧 [jackjonas95@gmail.com](mailto:jackjonas95@gmail.com)  
+🏗️ **Industry Expertise**: Seasoned rigger, crane operator, and heavy vehicle mechanic based in Karratha, Western Australia. Jack brings invaluable real-world experience from the challenging conditions of Karratha's mining sector, ensuring this Android application meets the practical needs of riggers who depend on mobile technology to find work and manage their careers in remote locations.
+
+**Tia** - ChaseWhiteRabbit NGO Technical Leadership  
+📧 [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)  
+🌟 **NGO Mission-Driven Leadership**: Swedish software developer and founder of ChaseWhiteRabbit NGO, dedicated to creating ethical technology solutions that empower blue-collar workers. Tia's commitment to supporting valuable trades and professions drives the development of tools that are as reliable and robust as they are innovative, prioritizing user empowerment over corporate profit.
 
 ### Primary Maintainers
 
