@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accessibility Settings"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/cd_accessibility_title"/>
+
+    <!-- High Contrast Mode -->
+    <Switch
+        android:id="@+id/switchHighContrast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="High Contrast Mode"
+        android:padding="16dp"
+        android:contentDescription="@string/cd_high_contrast_switch"/>
+
+    <!-- Font Size -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Font Size"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/cd_font_size_label"/>
+
+    <SeekBar
+        android:id="@+id/seekBarFontSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="100"
+        android:contentDescription="@string/cd_font_size_slider"/>
+
+    <!-- Voice Control -->
+    <Switch
+        android:id="@+id/switchVoiceControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voice Control"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/cd_voice_control_switch"/>
+
+    <!-- Gesture Alternatives -->
+    <Switch
+        android:id="@+id/switchGestureAlternatives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Gesture Alternatives"
+        android:padding="16dp"
+        android:contentDescription="@string/cd_gesture_alternatives_switch"/>
+
+    <Button
+        android:id="@+id/btnAccessibilityHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accessibility Help"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/cd_help_button"/>
+
+</LinearLayout>

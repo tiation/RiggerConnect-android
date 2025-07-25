@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Content Descriptions -->
+    <string name="cd_menu_button">Menu button</string>
+    <string name="cd_back_button">Navigate back</string>
+    <string name="cd_profile_image">Profile picture</string>
+    <string name="cd_notification_icon">Notifications</string>
+    
+    <!-- High Contrast Colors -->
+    <color name="high_contrast_primary">#FFFFFF</color>
+    <color name="high_contrast_background">#000000</color>
+    <color name="high_contrast_text">#FFFFFF</color>
+    <color name="high_contrast_accent">#FFC107</color>
+    
+    <!-- Font Scales -->
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+</resources>

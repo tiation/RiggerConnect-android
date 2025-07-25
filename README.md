@@ -7,6 +7,7 @@
   
   # 🏗️ Professional Networking Platform for Riggers
   
+  [![GitLab CI/CD](https://gitlab.sxc.codes/tiation/RiggerConnect-android/badges/main/pipeline.svg)](https://gitlab.sxc.codes/tiation/RiggerConnect-android/-/pipelines)
   [![Android](https://img.shields.io/badge/Android-API%2024+-brightgreen.svg)](https://android-arsenal.com/api?level=24)
   [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.20-blue.svg)](https://kotlinlang.org)
   [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-2024.06-green.svg)](https://developer.android.com/jetpack/compose)
@@ -498,3 +499,49 @@ These interconnected repositories form a comprehensive ecosystem designed to ser
 *Connecting Australia's riggers with their next opportunity*
 
 </div>
+
+## 🌟 Project Vision: Empowering Industry Through Ethical Technology
+
+### How This Platform Serves Jack Jonas and the Rigging Industry
+
+RiggerConnect Android delivers cutting-edge mobile solutions specifically designed for the demanding environment of Western Australia's rigging industry. For professionals like Jack Jonas working in Karratha's challenging conditions, this native Android application provides:
+
+- **Field-Ready Mobile Access**: Purpose-built native Android app optimized for outdoor use and industrial environments, with high-contrast displays and offline functionality
+- **Real-Time Opportunity Discovery**: Instant notifications and GPS-based job matching ensure riggers never miss opportunities, even in remote locations
+- **Certification Management**: Digital storage and verification of critical safety certifications, always accessible during compliance checks and site visits
+- **Professional Networking**: Connect with industry contacts, employers, and peers through a platform that understands the transient nature of rigging work
+- **Career Progression Tools**: Digital portfolio and skills tracking that helps riggers demonstrate their expertise and advance their careers
+
+### Supporting ChaseWhiteRabbit NGO's Charitable Mission
+
+Every successful interaction through RiggerConnect Android generates sustainable funding for ChaseWhiteRabbit NGO's charitable initiatives:
+
+- **Mobile-First Impact**: Revenue from mobile app usage directly supports NGO programs that focus on digital inclusion and technology access in underserved communities
+- **Skills Development Funding**: Platform success enables NGO investment in vocational training programs that help disadvantaged youth enter the trades
+- **Community Technology Centers**: App-generated revenue helps establish technology access points in remote and rural communities
+- **Open Source Advocacy**: Platform growth supports NGO research and development of additional open-source tools that benefit blue-collar workers
+- **Worker Rights Research**: Revenue funds policy research and advocacy for fair labor practices in the gig economy and contract work sectors
+
+### Ethical, Accessible, and Worker-First Technology
+
+RiggerConnect Android exemplifies ChaseWhiteRabbit NGO's commitment to technology that empowers rather than exploits:
+
+**🔍 Ethical by Design**
+- GPL v3 licensing ensures complete transparency and prevents proprietary exploitation of worker data
+- Algorithmic fairness in job matching prevents discrimination and promotes equal opportunity
+- Privacy-first architecture with local data encryption protects user information
+- Anti-bias safeguards in AI matching algorithms ensure fair treatment regardless of background
+
+**♿ Accessibility as a Core Value**
+- Material Design 3 compliance with accessibility features for users with diverse abilities
+- Multi-language support reflecting WA's diverse workforce communities
+- Offline-first architecture acknowledging connectivity challenges in remote work sites
+- Voice navigation and audio feedback for hands-free operation in work environments
+
+**👷 Worker-Focused Philosophy**
+- User ownership of data and profiles prevents vendor lock-in and ensures portability
+- Transparent fee structures that don't exploit workers or reduce take-home pay
+- Direct feedback mechanisms giving workers voice in platform development and improvements
+- Skills-based recognition that values practical experience and craftsmanship over credentials
+
+This native Android platform demonstrates that enterprise-grade mobile technology can simultaneously serve industry needs, empower individual workers, and generate sustainable funding for social good - proving that ethical technology practices create stronger, more sustainable business models.

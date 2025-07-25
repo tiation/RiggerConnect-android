@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Accessibility Settings -->
+    <string name="cd_accessibility_title">Accessibility Settings page</string>
+    <string name="cd_high_contrast_switch">Toggle high contrast mode</string>
+    <string name="cd_font_size_label">Font size control</string>
+    <string name="cd_font_size_slider">Adjust text size. Slide right to increase, left to decrease.</string>
+    <string name="cd_voice_control_switch">Toggle voice control</string>
+    <string name="cd_gesture_alternatives_switch">Toggle gesture alternatives</string>
+    <string name="cd_help_button">View accessibility help documentation</string>
+
+    <!-- Navigation -->
+    <string name="cd_back_nav">Navigate back</string>
+    <string name="cd_menu_nav">Open menu</string>
+    <string name="cd_home_nav">Go to home screen</string>
+
+    <!-- Common Actions -->
+    <string name="cd_refresh">Refresh content</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_share">Share</string>
+    <string name="cd_more_options">More options</string>
+
+    <!-- Form Elements -->
+    <string name="cd_text_input">Text input field</string>
+    <string name="cd_submit_button">Submit form</string>
+    <string name="cd_clear_button">Clear form</string>
+    <string name="cd_error_message">Error: %1$s</string>
+
+    <!-- Announcements -->
+    <string name="announce_loading">Loading content</string>
+    <string name="announce_success">Action completed successfully</string>
+    <string name="announce_error">Error occurred</string>
+    <string name="announce_updated">Content updated</string>
+
+    <!-- Voice Control Commands -->
+    <string name="voice_cmd_back">Go back</string>
+    <string name="voice_cmd_home">Go home</string>
+    <string name="voice_cmd_refresh">Refresh page</string>
+    <string name="voice_cmd_search">Search</string>
+
+    <!-- Gesture Alternatives -->
+    <string name="gesture_swipe_left">Previous item</string>
+    <string name="gesture_swipe_right">Next item</string>
+    <string name="gesture_double_tap">Select item</string>
+    <string name="gesture_long_press">Open context menu</string>
+</resources>
