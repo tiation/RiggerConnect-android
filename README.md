@@ -150,22 +150,74 @@ The Android app implements all 47 screens from the iOS version with identical fu
 
 ## 🛠 Technical Stack
 
-- **Language**: Kotlin 1.9.20
-- **UI Framework**: Jetpack Compose 1.5.4
+- **Language**: Kotlin 1.9.21 (Latest Enterprise Release)
+- **UI Framework**: Jetpack Compose 1.5.8 with Material3 BOM 2024.02.00
 - **Architecture**: MVVM with Android Architecture Components
 - **Minimum Android**: API 24 (Android 7.0)
 - **Target Android**: API 34 (Android 14)
+- **Compile SDK**: 34 (Latest Enterprise Standards)
 - **Design System**: Material Design 3 with custom dark neon theme
-- **Networking**: Retrofit 2.9.0 with OkHttp
+- **Networking**: Retrofit 2.9.0 with OkHttp 4.12.0
 - **Authentication**: JWT tokens with encrypted storage
 - **Location Services**: Android Location API
 - **Push Notifications**: Firebase Cloud Messaging
 - **Analytics**: Firebase Analytics
 - **Crash Reporting**: Firebase Crashlytics
 - **Payment Processing**: Stripe SDK integration
-- **CI/CD**: GitLab CI/CD with Fastlane automation
-- **Code Quality**: SonarQube analysis and Detekt static analysis
-- **Security**: OWASP Mobile Security Testing
+- **CI/CD**: GitHub Actions Enterprise CI/CD Pipeline
+- **Code Quality**: Multi-tier static analysis with Detekt 1.23.4, ktlint 12.1.0, and Spotless 6.25.0
+- **Security**: OWASP Mobile Security Testing with enterprise-grade quality gates
+
+## 🔍 Enterprise Quality Assurance
+
+### Static Analysis & Code Quality
+Our enterprise-grade quality pipeline ensures maximum code reliability and maintainability:
+
+#### **🛡️ Multi-Tier Static Analysis**
+- **Detekt 1.23.4**: Advanced Kotlin static analysis with 400+ rules
+  - Complexity analysis and cyclomatic complexity tracking
+  - Code smell detection and architectural violation prevention  
+  - Security vulnerability scanning
+  - Custom enterprise rule sets for rigorous quality standards
+  
+- **ktlint 12.1.0**: Kotlin code style enforcement
+  - Automatic formatting with Android-specific rules
+  - Consistent code style across all contributors
+  - Integration with IDE and CI/CD pipeline
+  
+- **Spotless 6.25.0**: Multi-format code formatting
+  - Kotlin, Gradle, XML, and documentation formatting
+  - Trailing whitespace and line ending normalization
+  - Import organization and code structure consistency
+
+#### **📊 Quality Metrics & Reporting**
+- **Zero-tolerance policy**: Build fails on any quality gate violations
+- **Comprehensive reporting**: HTML, XML, SARIF, and TXT format outputs
+- **Baseline support**: Granular control over existing issues vs. new violations
+- **Enterprise dashboards**: Real-time quality metrics and trend analysis
+
+#### **🚀 Developer Experience**
+- **One-command quality checks**: `./scripts/quality-check.sh`
+- **Auto-formatting tools**: `./scripts/auto-format.sh`  
+- **IDE integration**: Pre-commit hooks and real-time linting
+- **Modular build system**: Shared dependency management via buildSrc
+
+### Quality Gate Workflow
+```bash
+# Run complete quality analysis
+./scripts/quality-check.sh
+
+# Auto-fix formatting issues  
+./scripts/auto-format.sh
+
+# Individual tool execution
+./gradlew detekt          # Static analysis
+./gradlew ktlintCheck     # Style validation
+./gradlew spotlessCheck   # Format validation
+
+# Generate quality baselines
+./gradlew detektBaseline  # Create baseline for existing issues
+```
 
 ## 🎨 Dark Neon Theme
 

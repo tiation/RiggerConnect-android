@@ -1,4 +1,4 @@
-name: RiggerConnect Android Enterprise CI/CD
+name: Enterprise Quality Checks
 
 on:
   push:
@@ -59,6 +59,9 @@ jobs:
     - name: Run Detekt Static Analysis
       run: ./gradlew detekt
     
+    - name: Run Android Lint
+      run: ./gradlew lint
+    
     - name: Upload Quality Reports
       if: always()
       uses: actions/upload-artifact@v4
@@ -67,19 +70,15 @@ jobs:
         path: |
           **/build/reports/detekt/
           **/build/reports/ktlint/
+          **/build/reports/lint/
         retention-days: 7
 
-  # Unit and instrumentation tests
+  # Unit tests with coverage reporting
   test:
-    name: 🧪 Tests
+    name: 🧪 Unit Tests
     runs-on: ubuntu-latest
     needs: quality-gate
-    timeout-minutes: 30
-    
-    strategy:
-      matrix:
-        api-level: [24, 29, 34]
-      fail-fast: false
+    timeout-minutes: 15
     
     steps:
     - name: Checkout Repository
@@ -114,7 +113,7 @@ jobs:
       uses: dorny/test-reporter@v1
       if: success() || failure()
       with:
-        name: Unit Test Results (API ${{ matrix.api-level }})
+        name: Unit Test Results
         path: '**/build/test-results/testDebugUnitTest/TEST-*.xml'
         reporter: java-junit
     
@@ -122,22 +121,18 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: test-reports-api-${{ matrix.api-level }}
+        name: test-reports
         path: |
           **/build/reports/tests/
           **/build/test-results/
         retention-days: 7
 
-  # Build and artifact generation
+  # Build artifacts and run final checks
   build:
-    name: 🏗️ Build
+    name: 🏗️ Build & Verify
     runs-on: ubuntu-latest
     needs: [quality-gate, test]
     timeout-minutes: 20
-    
-    outputs:
-      version: ${{ steps.version.outputs.version }}
-      build-number: ${{ steps.version.outputs.build-number }}
     
     steps:
     - name: Checkout Repository
@@ -165,69 +160,49 @@ jobs:
     - name: Grant Execute Permission for Gradlew
       run: chmod +x gradlew
     
-    - name: Generate Version Info
-      id: version
-      run: |
-        BUILD_NUMBER=${{ github.run_number }}
-        VERSION=$(grep "versionName" app/build.gradle.kts | cut -d '"' -f 2)
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "build-number=$BUILD_NUMBER" >> $GITHUB_OUTPUT
-        echo "Building version: $VERSION ($BUILD_NUMBER)"
-    
     - name: Build Debug APK
       run: ./gradlew assembleDebug
     
-    - name: Build Release APK
-      if: github.ref == 'refs/heads/main'
-      run: ./gradlew assembleRelease
-    
-    - name: Run Android Lint
-      run: ./gradlew lintDebug
+    - name: Run Final Quality Gate
+      run: ./gradlew qualityGate
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
         path: |
-          app/build/outputs/apk/
-          app/build/reports/lint-results*.html
+          **/build/outputs/apk/
+          **/build/reports/
         retention-days: 30
     
-    - name: Upload APK to Release (Main Branch)
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    - name: Upload Debug APK (PR Only)
+      if: github.event_name == 'pull_request'
       uses: actions/upload-artifact@v4
       with:
-        name: riggerconnect-android-release
-        path: app/build/outputs/apk/release/*.apk
-        retention-days: 90
-
-  deploy:
-    name: Deploy to Play Store
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'release'
+        name: debug-apk
+        path: app/build/outputs/apk/debug/*.apk
+        retention-days: 7
     
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-
-    - name: Setup JDK
-      uses: actions/setup-java@v4
+    - name: Create Status Check
+      if: always()
+      uses: actions/github-script@v7
       with:
-        java-version: ${{ env.JAVA_VERSION }}
-        distribution: 'temurin'
-
-    - name: Download Release APK
-      uses: actions/download-artifact@v3
-      with:
-        name: release-apk
-        path: release-artifacts/
-
-    - name: Deploy to Play Store
-      uses: r0adkll/upload-google-play@v1
-      with:
-        serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
-        packageName: com.riggerconnect.android
-        releaseFiles: release-artifacts/*.apk
-        track: production
-        status: completed
+        script: |
+          const conclusion = '${{ job.status }}' === 'success' ? 'success' : 'failure';
+          const summary = conclusion === 'success' 
+            ? '✅ Enterprise quality standards met'
+            : '❌ Failed to meet enterprise quality standards';
+          
+          github.rest.checks.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            name: 'Enterprise Quality',
+            head_sha: context.sha,
+            status: 'completed',
+            conclusion,
+            output: {
+              title: 'Enterprise Quality Check Results',
+              summary,
+              text: 'Quality checks include:\n- Static Analysis (detekt)\n- Code Style (ktlint)\n- Formatting (spotless)\n- Android Lint\n- Unit Tests'
+            }
+          });

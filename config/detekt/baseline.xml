@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <!-- 
+    This baseline file will be populated when you first run detekt.
+    It allows you to acknowledge existing issues without failing the build,
+    while ensuring new issues are caught.
+    
+    To generate/update the baseline, run:
+    ./gradlew detektBaseline
+    -->
+  </CurrentIssues>
+</SmellBaseline>
